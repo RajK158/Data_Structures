@@ -44,4 +44,4 @@ if __name__ == "__main__":
     print(mf.findMedian())  # 2.0
 
     mf.addNum(2)
-    print(mf.findMedian())  # 2.0
+    print(mf.findMedian())  # 2.0m
