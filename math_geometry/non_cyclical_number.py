@@ -1,0 +1,33 @@
+class Solution:
+
+    def isHappy(self, n: int) -> bool:
+
+        seen = set()
+
+        while n != 1:
+
+            if n in seen:
+                return False
+
+            seen.add(n)
+
+            total = 0
+
+            while n > 0:
+
+                digit = n % 10
+                total += digit * digit
+                n //= 10
+
+            n = total
+
+        return True
+
+
+if __name__ == "__main__":
+
+    sol = Solution()
+
+    print(sol.isHappy(100))  # True
+    print(sol.isHappy(101))  # False
+    print(sol.isHappy(19))   # True
